@@ -1,4 +1,4 @@
-package com.hyfly.http.sdk.request;
+package com.hyfly.http.sdk.remote.request;
 
 import com.hyfly.http.sdk.response.HttpClientResponse;
 
