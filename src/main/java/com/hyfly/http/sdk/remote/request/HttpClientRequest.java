@@ -1,6 +1,6 @@
 package com.hyfly.http.sdk.remote.request;
 
-import com.hyfly.http.sdk.response.HttpClientResponse;
+import com.hyfly.http.sdk.remote.response.HttpClientResponse;
 
 import java.io.Closeable;
 import java.net.URI;

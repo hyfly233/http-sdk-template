@@ -1,4 +1,4 @@
-package com.hyfly.http.sdk.response;
+package com.hyfly.http.sdk.remote.response;
 
 import java.io.Closeable;
 import java.io.IOException;
