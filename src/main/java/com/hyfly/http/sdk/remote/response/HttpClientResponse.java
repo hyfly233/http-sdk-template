@@ -13,4 +13,3 @@ public interface HttpClientResponse extends Closeable {
 
     int getStatusCode();
 }
-
