@@ -2,6 +2,7 @@ package com.hyfly.http.sdk.remote.handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hyfly.http.sdk.remote.BaseHttpRestResult;
+import com.hyfly.http.sdk.remote.TypeReferenceHttpResult;
 import com.hyfly.http.sdk.remote.response.HttpClientResponse;
 import org.apache.http.HttpStatus;
 
@@ -34,6 +35,5 @@ public class ResponseHandler<T> {
 
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(is, new TypeReferenceHttpResult<>(responseType));
-
     }
 }
