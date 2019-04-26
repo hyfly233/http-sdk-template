@@ -6,11 +6,10 @@ import org.slf4j.LoggerFactory;
 
 public class HttpSdkClient {
 
-    Logger logger = LoggerFactory.getLogger(HttpSdkClient.class);
-
     private final String url;
     private final String token;
     private final HttpSdkRestTemplate restTemplate;
+    Logger logger = LoggerFactory.getLogger(HttpSdkClient.class);
 
     public HttpSdkClient(String url, String token, HttpSdkRestTemplate restTemplate) {
         this.url = url;

@@ -16,6 +16,13 @@ public class Query {
         params = new LinkedHashMap<>();
     }
 
+    public static URI buildUri(String url, Query query) throws Exception {
+        if (query != null && !query.isEmpty()) {
+            url = url + "?" + query.toQueryUrl();
+        }
+        return new URI(url);
+    }
+
     public Query addParam(String key, String value) {
         if (key != null && value != null) {
             params.put(key, value);
@@ -49,12 +56,5 @@ public class Query {
                     return i.getKey() + "=" + encode;
                 })
                 .collect(Collectors.joining("&"));
-    }
-
-    public static URI buildUri(String url, Query query) throws Exception {
-        if (query != null && !query.isEmpty()) {
-            url = url + "?" + query.toQueryUrl();
-        }
-        return new URI(url);
     }
 }
