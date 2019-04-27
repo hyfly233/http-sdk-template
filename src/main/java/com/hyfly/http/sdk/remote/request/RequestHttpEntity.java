@@ -34,15 +34,11 @@ public class RequestHttpEntity {
     }
 
     public Map<String, Object> castBodyToMap() {
-        if (ifBodyIsMap()) {
+        if (body instanceof Map) {
             return (Map<String, Object>) body;
         }
         throw new UnsupportedOperationException(
                 "the body is not instance of map,do not use this method");
-    }
-
-    public boolean ifBodyIsMap() {
-        return body instanceof Map;
     }
 
     public String bodyToJson() {
