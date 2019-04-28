@@ -1,5 +1,6 @@
 package com.hyfly.http.sdk.remote.request;
 
+import com.hyfly.http.sdk.remote.BaseHttpMethod;
 import com.hyfly.http.sdk.remote.response.DefaultHttpClientResponse;
 import com.hyfly.http.sdk.remote.response.HttpClientResponse;
 import org.apache.http.client.config.RequestConfig;
@@ -34,8 +35,8 @@ public class DefaultHttpClientRequest implements HttpClientRequest {
     }
 
     private HttpRequestBase build(URI uri, String httpMethod, RequestHttpEntity requestHttpEntity) throws Exception {
-        requestHttpEntity.getBody();
-
+        Object body = requestHttpEntity.getBody();
+        BaseHttpMethod method = BaseHttpMethod.of(httpMethod);
 
         return null;
     }
