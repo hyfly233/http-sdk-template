@@ -1,6 +1,6 @@
-package com.hyfly.http.sdk.core;
+package com.hyfly.template.sdk.core;
 
-import com.hyfly.http.sdk.remote.HttpSdkRestTemplate;
+import com.hyfly.template.sdk.remote.HttpSdkRestTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

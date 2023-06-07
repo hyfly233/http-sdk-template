@@ -1,4 +1,4 @@
-package com.hyfly.http.sdk.remote;
+package com.hyfly.template.sdk.remote;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

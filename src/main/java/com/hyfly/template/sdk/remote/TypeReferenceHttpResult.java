@@ -1,4 +1,4 @@
-package com.hyfly.http.sdk.remote;
+package com.hyfly.template.sdk.remote;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

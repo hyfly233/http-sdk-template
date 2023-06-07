@@ -1,8 +1,8 @@
-package com.hyfly.http.sdk.remote.request;
+package com.hyfly.template.sdk.remote.request;
 
-import com.hyfly.http.sdk.remote.BaseHttpMethod;
-import com.hyfly.http.sdk.remote.response.DefaultHttpClientResponse;
-import com.hyfly.http.sdk.remote.response.HttpClientResponse;
+import com.hyfly.template.sdk.remote.BaseHttpMethod;
+import com.hyfly.template.sdk.remote.response.DefaultHttpClientResponse;
+import com.hyfly.template.sdk.remote.response.HttpClientResponse;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpRequestBase;

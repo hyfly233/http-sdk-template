@@ -1,4 +1,4 @@
-package com.hyfly.http;
+package com.hyfly.template.httpclient;
 
 import com.template.httpclient.core.HttpRestTemplate;
 import com.template.httpclient.factory.HttpClientFactory;

@@ -1,4 +1,4 @@
-package com.hyfly.http.sdk.remote.response;
+package com.hyfly.template.sdk.remote.response;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;

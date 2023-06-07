@@ -1,4 +1,4 @@
-package com.hyfly.http.sdk.remote;
+package com.hyfly.template.sdk.remote;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URI;

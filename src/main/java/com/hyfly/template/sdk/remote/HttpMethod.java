@@ -1,4 +1,4 @@
-package com.hyfly.http.sdk.remote;
+package com.hyfly.template.sdk.remote;
 
 public class HttpMethod {
     public static final String GET = "GET";

@@ -1,9 +1,9 @@
-package com.hyfly.http.sdk.remote.handler;
+package com.hyfly.template.sdk.remote.handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hyfly.http.sdk.remote.BaseHttpRestResult;
-import com.hyfly.http.sdk.remote.TypeReferenceHttpResult;
-import com.hyfly.http.sdk.remote.response.HttpClientResponse;
+import com.hyfly.template.sdk.remote.BaseHttpRestResult;
+import com.hyfly.template.sdk.remote.TypeReferenceHttpResult;
+import com.hyfly.template.sdk.remote.response.HttpClientResponse;
 import org.apache.http.HttpStatus;
 
 import java.io.InputStream;
