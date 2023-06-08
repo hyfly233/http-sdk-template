@@ -1,8 +1,8 @@
 package com.hyfly.template.httpclient;
 
-import com.template.httpclient.core.HttpRestTemplate;
-import com.template.httpclient.factory.HttpClientFactory;
-import com.template.httpclient.model.*;
+import com.hyfly.template.httpclient.core.HttpRestTemplate;
+import com.hyfly.template.httpclient.factory.HttpClientFactory;
+import com.hyfly.template.httpclient.model.*;
 import lombok.extern.slf4j.Slf4j;
 
 /**
