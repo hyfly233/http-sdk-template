@@ -3,6 +3,7 @@ package com.hyfly.template.httpclient.request;
 import com.alibaba.fastjson2.JSONObject;
 import com.google.common.net.HttpHeaders;
 import com.google.common.net.MediaType;
+import com.hyfly.template.sdk.remote.request.HttpClientRequest;
 import com.template.httpclient.enums.BaseHttpMethod;
 import com.template.httpclient.model.Header;
 import com.template.httpclient.model.RequestHttpEntity;
