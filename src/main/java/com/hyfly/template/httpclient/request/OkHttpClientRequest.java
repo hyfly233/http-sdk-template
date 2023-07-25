@@ -3,6 +3,8 @@ package com.hyfly.template.httpclient.request;
 import com.alibaba.fastjson2.JSONObject;
 import com.google.common.net.HttpHeaders;
 import com.google.common.net.MediaType;
+import com.hyfly.template.httpclient.model.RequestHttpEntity;
+import com.hyfly.template.sdk.remote.response.HttpClientResponse;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import org.apache.http.entity.ContentType;
