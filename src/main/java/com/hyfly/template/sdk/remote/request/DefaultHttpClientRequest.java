@@ -1,6 +1,5 @@
 package com.hyfly.template.sdk.remote.request;
 
-import com.hyfly.template.sdk.remote.BaseHttpMethod;
 import com.hyfly.template.sdk.remote.response.DefaultHttpClientResponse;
 import com.hyfly.template.sdk.remote.response.HttpClientResponse;
 import org.apache.http.client.config.RequestConfig;

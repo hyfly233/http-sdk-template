@@ -1,8 +1,6 @@
 package com.hyfly.template.sdk.remote.request;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.hyfly.template.sdk.remote.Header;
-import com.hyfly.template.sdk.remote.Query;
 
 import java.util.Map;
 
