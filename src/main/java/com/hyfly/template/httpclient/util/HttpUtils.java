@@ -1,6 +1,6 @@
 package com.hyfly.template.httpclient.util;
 
-import com.template.httpclient.model.Query;
+import com.hyfly.template.httpclient.model.Query;
 
 import java.net.URI;
 import java.net.URISyntaxException;
