@@ -35,7 +35,7 @@ public class SseEventParser {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(inputStream, StandardCharsets.UTF_8));
 
-            SseEvent.Builder eventBuilder = new SseEvent.Builder();
+            SseEvent.Builder eventBuilder = new SseEvent.builder();
             String line;
 
             while (running.get() && (line = reader.readLine()) != null) {

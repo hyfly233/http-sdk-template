@@ -1,8 +1,8 @@
 package com.hyfly.template.httpclient.sse;
 
+import com.hyfly.template.httpclient.response.HttpClientResponse;
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;

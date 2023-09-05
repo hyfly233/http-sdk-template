@@ -2,6 +2,7 @@ package com.hyfly.template.httpclient.benchmark;
 
 import com.hyfly.template.httpclient.HttpClient;
 import com.hyfly.template.httpclient.factory.HttpClientFactory;
+import com.hyfly.template.httpclient.model.HttpRestResult;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.Callable;
