@@ -1,6 +1,7 @@
 package com.hyfly.template.httpclient.enums;
 
 import com.google.common.base.Strings;
+import com.hyfly.template.httpclient.constants.HttpMethod;
 import org.apache.http.client.methods.*;
 
 /**
@@ -8,35 +9,35 @@ import org.apache.http.client.methods.*;
  */
 public enum BaseHttpMethod {
 
-    GET(com.hyfly.template.httpclient.constants.HttpMethod.GET) {
+    GET(HttpMethod.GET) {
         @Override
         protected HttpRequestBase createRequest(String url) {
             return new HttpGet(url);
         }
     },
 
-    POST(com.hyfly.template.httpclient.constants.HttpMethod.POST) {
+    POST(HttpMethod.POST) {
         @Override
         protected HttpRequestBase createRequest(String url) {
             return new HttpPost(url);
         }
     },
 
-    PUT(com.hyfly.template.httpclient.constants.HttpMethod.PUT) {
+    PUT(HttpMethod.PUT) {
         @Override
         protected HttpRequestBase createRequest(String url) {
             return new HttpPut(url);
         }
     },
 
-    PATCH(com.hyfly.template.httpclient.constants.HttpMethod.PATCH) {
+    PATCH(HttpMethod.PATCH) {
         @Override
         protected HttpRequestBase createRequest(String url) {
             return new HttpPatch(url);
         }
     },
 
-    DELETE(com.hyfly.template.httpclient.constants.HttpMethod.DELETE) {
+    DELETE(HttpMethod.DELETE) {
         @Override
         protected HttpRequestBase createRequest(String url) {
             return new HttpDelete(url);
