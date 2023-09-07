@@ -2,6 +2,10 @@ package com.hyfly.template.httpclient.handler;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.CharStreams;
+import com.hyfly.template.httpclient.json.JsonProcessor;
+import com.hyfly.template.httpclient.json.JsonProcessorFactory;
+import com.hyfly.template.httpclient.model.HttpRestResult;
+import com.hyfly.template.httpclient.response.HttpClientResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpStatus;
 

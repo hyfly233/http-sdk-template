@@ -2,6 +2,7 @@ package com.hyfly.template.httpclient.factory;
 
 import com.google.common.base.Strings;
 import com.hyfly.template.httpclient.core.HttpRestTemplate;
+import com.hyfly.template.httpclient.request.ApacheHttpClientRequest;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.protocol.RequestContent;
