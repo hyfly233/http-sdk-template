@@ -3,12 +3,11 @@ package com.hyfly.template.httpclient.request;
 import com.alibaba.fastjson2.JSONObject;
 import com.google.common.net.HttpHeaders;
 import com.google.common.net.MediaType;
-import com.hyfly.template.sdk.remote.request.HttpClientRequest;
-import com.template.httpclient.enums.BaseHttpMethod;
-import com.template.httpclient.model.Header;
-import com.template.httpclient.model.RequestHttpEntity;
-import com.template.httpclient.response.ApacheHttpClientResponse;
-import com.template.httpclient.response.HttpClientResponse;
+import com.hyfly.template.httpclient.enums.BaseHttpMethod;
+import com.hyfly.template.httpclient.model.Header;
+import com.hyfly.template.httpclient.model.RequestHttpEntity;
+import com.hyfly.template.httpclient.response.ApacheHttpClientResponse;
+import com.hyfly.template.httpclient.response.HttpClientResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpEntityEnclosingRequest;
@@ -28,7 +27,10 @@ import org.apache.http.message.BasicNameValuePair;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Apache HttpClient请求实现类

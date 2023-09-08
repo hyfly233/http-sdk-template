@@ -1,8 +1,7 @@
 package com.hyfly.template.httpclient.request;
 
-
 import com.hyfly.template.httpclient.model.RequestHttpEntity;
-import com.hyfly.template.sdk.remote.response.HttpClientResponse;
+import com.hyfly.template.httpclient.response.HttpClientResponse;
 
 import java.io.Closeable;
 import java.net.URI;
