@@ -2,7 +2,9 @@ package com.hyfly.template.httpclient;
 
 import com.hyfly.template.httpclient.core.HttpRestTemplate;
 import com.hyfly.template.httpclient.factory.HttpClientFactory;
-import com.hyfly.template.httpclient.model.*;
+import com.hyfly.template.httpclient.model.Header;
+import com.hyfly.template.httpclient.model.HttpRestResult;
+import com.hyfly.template.httpclient.model.Query;
 import lombok.extern.slf4j.Slf4j;
 
 /**
