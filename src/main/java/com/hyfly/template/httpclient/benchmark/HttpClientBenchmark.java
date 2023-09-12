@@ -12,8 +12,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * HTTP客户端性能基准测试
- * 比较 Apache HttpClient 和 OkHttp 的性能差异
+ * HTTP客户端性能基准测试 比较 Apache HttpClient 和 OkHttp 的性能差异
  */
 @Slf4j
 public class HttpClientBenchmark {
