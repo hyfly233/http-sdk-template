@@ -3,7 +3,10 @@ package com.hyfly.template.httpclient.core;
 import com.google.common.net.MediaType;
 import com.hyfly.template.httpclient.constants.HttpMethod;
 import com.hyfly.template.httpclient.handler.ResponseHandler;
-import com.hyfly.template.httpclient.model.*;
+import com.hyfly.template.httpclient.model.Header;
+import com.hyfly.template.httpclient.model.HttpRestResult;
+import com.hyfly.template.httpclient.model.Query;
+import com.hyfly.template.httpclient.model.RequestHttpEntity;
 import com.hyfly.template.httpclient.request.HttpClientRequest;
 import com.hyfly.template.httpclient.response.HttpClientResponse;
 import com.hyfly.template.httpclient.util.HttpUtils;
@@ -153,12 +156,12 @@ public class HttpRestTemplate {
     /**
      * PUT表单请求（带查询参数）
      *
-     * @param url          请求URL
-     * @param header       请求头
-     * @param query        查询参数
-     * @param body         请求体
+     * @param url 请求URL
+     * @param header 请求头
+     * @param query 查询参数
+     * @param body 请求体
      * @param responseType 响应类型
-     * @param <T>          响应数据类型
+     * @param <T> 响应数据类型
      * @return 响应结果
      * @throws Exception 异常
      */
@@ -172,11 +175,11 @@ public class HttpRestTemplate {
     /**
      * PUT JSON请求
      *
-     * @param url          请求URL
-     * @param header       请求头
-     * @param body         请求体
+     * @param url 请求URL
+     * @param header 请求头
+     * @param body 请求体
      * @param responseType 响应类型
-     * @param <T>          响应数据类型
+     * @param <T> 响应数据类型
      * @return 响应结果
      * @throws Exception 异常
      */
@@ -190,12 +193,12 @@ public class HttpRestTemplate {
     /**
      * PUT JSON请求（带查询参数）
      *
-     * @param url          请求URL
-     * @param header       请求头
-     * @param query        查询参数
-     * @param body         请求体
+     * @param url 请求URL
+     * @param header 请求头
+     * @param query 查询参数
+     * @param body 请求体
      * @param responseType 响应类型
-     * @param <T>          响应数据类型
+     * @param <T> 响应数据类型
      * @return 响应结果
      * @throws Exception 异常
      */
@@ -209,11 +212,11 @@ public class HttpRestTemplate {
     /**
      * DELETE请求
      *
-     * @param url          请求URL
-     * @param header       请求头
-     * @param query        查询参数
+     * @param url 请求URL
+     * @param header 请求头
+     * @param query 查询参数
      * @param responseType 响应类型
-     * @param <T>          响应数据类型
+     * @param <T> 响应数据类型
      * @return 响应结果
      * @throws Exception 异常
      */
@@ -225,8 +228,7 @@ public class HttpRestTemplate {
     }
 
     /**
-     * SSE流式请求
-     * 用于处理Server-Sent Events响应
+     * SSE流式请求 用于处理Server-Sent Events响应
      *
      * @param url SSE接口URL
      * @param header 请求头
