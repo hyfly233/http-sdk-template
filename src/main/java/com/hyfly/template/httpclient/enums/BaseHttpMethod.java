@@ -8,7 +8,6 @@ import org.apache.http.client.methods.*;
  * HTTP方法枚举
  */
 public enum BaseHttpMethod {
-
     GET(HttpMethod.GET) {
         @Override
         protected HttpRequestBase createRequest(String url) {
