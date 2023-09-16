@@ -1,13 +1,13 @@
 package com.hyfly.template.httpclient.example;
 
 import com.hyfly.template.httpclient.HttpClient;
+import com.hyfly.template.httpclient.core.HttpRestTemplate;
 import com.hyfly.template.httpclient.factory.HttpClientFactory;
 import com.hyfly.template.httpclient.model.Header;
 import com.hyfly.template.httpclient.model.HttpRestResult;
 import com.hyfly.template.httpclient.model.Query;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import lombok.var;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -130,7 +130,7 @@ public class HttpClientExample {
         log.info("=== 自定义配置示例 ===");
 
         // 创建自定义配置的HTTP客户端
-        var customRestTemplate = HttpClientFactory.getCustomApacheRestTemplate(
+        HttpRestTemplate customRestTemplate = HttpClientFactory.getCustomApacheRestTemplate(
                 5000,   // 连接超时 5秒
                 30000,  // Socket超时 30秒
                 10000   // 请求超时 10秒
