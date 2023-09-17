@@ -74,18 +74,18 @@ public class HttpClientFactory {
     public static HttpRestTemplate getOkHttpRestTemplate() {
         return new HttpRestTemplate(
                 new com.hyfly.template.httpclient.request.OkHttpClientRequest(
-                        30000,  // 连接超时
-                        30000,  // 读取超时
-                        30000   // 写入超时
+                        30000, // 连接超时
+                        30000, // 读取超时
+                        30000 // 写入超时
                 ));
     }
 
     /**
      * 获取自定义配置的Apache HttpClient REST模板
      *
-     * @param connectTimeout    连接超时时间（毫秒）
-     * @param socketTimeout     Socket超时时间（毫秒）
-     * @param requestTimeout    请求超时时间（毫秒）
+     * @param connectTimeout 连接超时时间（毫秒）
+     * @param socketTimeout  Socket超时时间（毫秒）
+     * @param requestTimeout 请求超时时间（毫秒）
      * @return HttpRestTemplate
      */
     public static HttpRestTemplate getCustomApacheRestTemplate(int connectTimeout,
