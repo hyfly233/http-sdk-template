@@ -20,6 +20,8 @@ import java.io.InputStreamReader;
 public class ResponseHandler<T> {
 
     private Class<T> responseType;
+    private final JsonProcessor jsonProcessor;
+
     public ResponseHandler() {
         this.jsonProcessor = JsonProcessorFactory.getDefaultProcessor();
     }
