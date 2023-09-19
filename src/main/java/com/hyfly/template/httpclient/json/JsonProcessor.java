@@ -1,8 +1,7 @@
 package com.hyfly.template.httpclient.json;
 
 /**
- * JSON处理器接口
- * 支持不同的JSON库实现
+ * JSON处理器接口 支持不同的JSON库实现
  */
 public interface JsonProcessor {
 
@@ -17,9 +16,9 @@ public interface JsonProcessor {
     /**
      * JSON字符串反序列化为对象
      *
-     * @param json JSON字符串
+     * @param json  JSON字符串
      * @param clazz 目标类型
-     * @param <T> 泛型类型
+     * @param <T>   泛型类型
      * @return 反序列化后的对象
      */
     <T> T parseObject(String json, Class<T> clazz);
