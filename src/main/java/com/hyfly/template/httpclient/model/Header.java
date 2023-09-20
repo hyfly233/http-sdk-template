@@ -20,7 +20,7 @@ public class Header {
 
     private final Map<String, String> header;
 
-    private Header() {
+    public Header() {
         header = new LinkedHashMap<>();
         addParam(HttpHeaders.ACCEPT_CHARSET, DEFAULT_CHARSET);
         addParam(HttpHeaders.ACCEPT, MediaType.JSON_UTF_8.toString());
@@ -43,6 +43,17 @@ public class Header {
             header.put(key, value);
         }
         return this;
+    }
+
+    /**
+     * 添加请求头参数（别名方法）
+     *
+     * @param key   参数名
+     * @param value 参数值
+     * @return Header
+     */
+    public Header add(String key, String value) {
+        return addParam(key, value);
     }
 
     /**
