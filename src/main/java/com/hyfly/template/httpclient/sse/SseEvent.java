@@ -76,4 +76,55 @@ public class SseEvent {
         sb.append("\n");
         return sb.toString();
     }
+
+    /**
+     * SSE事件构建器
+     */
+    public static class Builder {
+        private final StringBuilder data = new StringBuilder();
+        private String id;
+        private String event;
+        private Long retry;
+
+        public void setField(String field, String value) {
+            switch (field) {
+                case "id":
+                    this.id = value;
+                    break;
+                case "event":
+                    this.event = value;
+                    break;
+                case "data":
+                    if (data.length() > 0) {
+                        data.append("\n");
+                    }
+                    data.append(value);
+                    break;
+                case "retry":
+                    try {
+                        this.retry = Long.parseLong(value);
+                    } catch (NumberFormatException e) {
+                        // 忽略无效的retry值
+                    }
+                    break;
+                default:
+                    // 忽略未知字段
+                    break;
+            }
+        }
+
+        public SseEvent build() {
+            if (data.length() == 0 && id == null && event == null && retry == null) {
+                return null;
+            }
+
+            SseEvent sseEvent = new SseEvent();
+            sseEvent.setId(id);
+            sseEvent.setEvent(event);
+            sseEvent.setData(data.toString());
+            sseEvent.setRetry(retry);
+
+            return sseEvent;
+        }
+    }
 }

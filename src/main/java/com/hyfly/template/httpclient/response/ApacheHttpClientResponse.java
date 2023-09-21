@@ -45,6 +45,12 @@ public class ApacheHttpClientResponse implements HttpClientResponse {
     }
 
     @Override
+    public String getContentType() {
+        org.apache.http.Header contentTypeHeader = response.getFirstHeader("Content-Type");
+        return contentTypeHeader != null ? contentTypeHeader.getValue() : null;
+    }
+
+    @Override
     public void close() throws IOException {
         if (this.response != null) {
             HttpClientUtils.closeQuietly(this.response);

@@ -32,6 +32,13 @@ public interface HttpClientResponse {
     int getStatusCode();
 
     /**
+     * 获取Content-Type
+     *
+     * @return Content-Type
+     */
+    String getContentType();
+
+    /**
      * 关闭响应
      *
      * @throws IOException IO异常

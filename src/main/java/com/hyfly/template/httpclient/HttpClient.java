@@ -8,8 +8,7 @@ import com.hyfly.template.httpclient.model.Query;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * HTTP客户端入口类
- * 提供简化的HTTP请求操作接口
+ * HTTP客户端入口类 提供简化的HTTP请求操作接口
  */
 @Slf4j
 public class HttpClient {
@@ -36,6 +35,15 @@ public class HttpClient {
     public HttpClient(String baseUrl, HttpRestTemplate restTemplate) {
         this.baseUrl = baseUrl;
         this.restTemplate = restTemplate;
+    }
+
+    /**
+     * 获取REST模板
+     *
+     * @return REST模板
+     */
+    public HttpRestTemplate getRestTemplate() {
+        return restTemplate;
     }
 
     /**
@@ -119,10 +127,10 @@ public class HttpClient {
     /**
      * POST表单请求
      *
-     * @param path         请求路径
-     * @param body         请求体
+     * @param path 请求路径
+     * @param body 请求体
      * @param responseType 响应类型
-     * @param <T>          响应数据类型
+     * @param <T> 响应数据类型
      * @return 响应结果
      */
     public <T> HttpRestResult<T> postForm(String path, Object body, Class<T> responseType) {
@@ -152,10 +160,10 @@ public class HttpClient {
     /**
      * PUT JSON请求
      *
-     * @param path         请求路径
-     * @param body         请求体
+     * @param path 请求路径
+     * @param body 请求体
      * @param responseType 响应类型
-     * @param <T>          响应数据类型
+     * @param <T> 响应数据类型
      * @return 响应结果
      */
     public <T> HttpRestResult<T> putJson(String path, Object body, Class<T> responseType) {

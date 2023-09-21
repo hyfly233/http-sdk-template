@@ -8,8 +8,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 /**
- * SSE客户端
- * 提供SSE连接管理和事件处理功能
+ * SSE客户端 提供SSE连接管理和事件处理功能
  */
 @Slf4j
 public class SseClient {
@@ -42,7 +41,7 @@ public class SseClient {
         return CompletableFuture.runAsync(() -> {
             try {
                 if (!"text/event-stream".equals(response.getContentType()) &&
-                    !"text/plain".equals(response.getContentType())) {
+                        !"text/plain".equals(response.getContentType())) {
                     log.warn("响应Content-Type不是标准SSE格式: {}", response.getContentType());
                 }
 
@@ -63,7 +62,7 @@ public class SseClient {
     public void handleSseResponseSync(HttpClientResponse response, SseEventHandler handler) {
         try {
             if (!"text/event-stream".equals(response.getContentType()) &&
-                !"text/plain".equals(response.getContentType())) {
+                    !"text/plain".equals(response.getContentType())) {
                 log.warn("响应Content-Type不是标准SSE格式: {}", response.getContentType());
             }
 

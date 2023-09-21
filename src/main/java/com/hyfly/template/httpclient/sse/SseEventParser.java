@@ -10,8 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * SSE事件解析器
- * 解析SSE流并转换为SseEvent对象
+ * SSE事件解析器 解析SSE流并转换为SseEvent对象
  */
 @Slf4j
 public class SseEventParser {
@@ -35,7 +34,7 @@ public class SseEventParser {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(inputStream, StandardCharsets.UTF_8));
 
-            SseEvent.Builder eventBuilder = new SseEvent.builder();
+            SseEvent.Builder eventBuilder = new SseEvent.Builder();
             String line;
 
             while (running.get() && (line = reader.readLine()) != null) {
@@ -121,56 +120,5 @@ public class SseEventParser {
      */
     public boolean isRunning() {
         return running.get();
-    }
-
-    /**
-     * SSE事件构建器
-     */
-    public static class Builder {
-        private String id;
-        private String event;
-        private StringBuilder data = new StringBuilder();
-        private Long retry;
-
-        public void setField(String field, String value) {
-            switch (field) {
-                case "id":
-                    this.id = value;
-                    break;
-                case "event":
-                    this.event = value;
-                    break;
-                case "data":
-                    if (data.length() > 0) {
-                        data.append("\n");
-                    }
-                    data.append(value);
-                    break;
-                case "retry":
-                    try {
-                        this.retry = Long.parseLong(value);
-                    } catch (NumberFormatException e) {
-                        log.warn("无效的retry值: {}", value);
-                    }
-                    break;
-                default:
-                    log.debug("未知的SSE字段: {} = {}", field, value);
-                    break;
-            }
-        }
-
-        public SseEvent build() {
-            if (data.length() == 0 && id == null && event == null && retry == null) {
-                return null;
-            }
-
-            SseEvent sseEvent = new SseEvent();
-            sseEvent.setId(id);
-            sseEvent.setEvent(event);
-            sseEvent.setData(data.toString());
-            sseEvent.setRetry(retry);
-
-            return sseEvent;
-        }
     }
 }

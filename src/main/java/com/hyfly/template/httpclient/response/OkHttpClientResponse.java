@@ -27,7 +27,7 @@ public class OkHttpClientResponse implements HttpClientResponse {
         if (this.responseHeaders == null) {
             responseHeaders = new HashMap<>();
             response.headers().forEach(pair ->
-                responseHeaders.put(pair.getFirst(), pair.getSecond()));
+                    responseHeaders.put(pair.getFirst(), pair.getSecond()));
         }
         return this.responseHeaders;
     }
@@ -41,6 +41,11 @@ public class OkHttpClientResponse implements HttpClientResponse {
     @Override
     public int getStatusCode() {
         return response.code();
+    }
+
+    @Override
+    public String getContentType() {
+        return response.header("Content-Type");
     }
 
     @Override
